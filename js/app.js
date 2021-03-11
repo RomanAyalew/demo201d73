@@ -17,7 +17,7 @@
 
 'use strict';
 
-let totalCorrectAnswers = 0;
+let score = 0;
 
 function getName(){
   let userName = prompt('Please Enter your Name: ');
@@ -35,7 +35,7 @@ function guessAge() {
     alert('Too Low');
   } else {
     alert('Correct!');
-    totalCorrectAnswers += 1;
+    score += 1;
   }
 }
 
@@ -46,7 +46,7 @@ function guessVisitPlace() {
 
   if (visitPlaceAnswer === 'yes') {
     alert('Yep!');
-    totalCorrectAnswers += 1;
+    score += 1;
   } else {
     alert('No, I like to visit Los Angeles');
   }
@@ -59,7 +59,7 @@ function guessWhere() {
 
   if (whereAnswer === 'yes') {
     alert('That is correct! I live in Seattle!');
-    totalCorrectAnswers += 1;
+    score += 1;
   } else {
     alert('No, I am from Seattle!');
   }
@@ -72,7 +72,7 @@ function guessJob() {
 
   if (jobAnswer === 'yes') {
     alert('Correct!');
-    totalCorrectAnswers += 1;
+    score += 1;
   } else {
     alert('Nope, sorry, I did work for a medical laboratory!');
   }
@@ -84,8 +84,8 @@ function guessVacation() {
   let sportsAnswer = prompt('Have I visited France?').toLowerCase();
 
   if (sportsAnswer === 'yes') {
-    alert('Yes!);
-    totalCorrectAnswers += 1;
+    alert('Yes!');
+    score += 1;
   } else {
     alert('No.');
   }
@@ -98,7 +98,7 @@ function numberGame1(correctAnswer, guesses) {
     let answer = parseInt(prompt('Please Enter a number 1-10'));
     if (answer === correctAnswer) {
       alert('Congratulation!');
-      totalCorrectAnswers += 1;
+      score += 1;
       break;
     } else if (answer > correctAnswer) {
       alert('Too high! Try Again!');
@@ -106,20 +106,20 @@ function numberGame1(correctAnswer, guesses) {
       alert('Too low! Try Again!');
     }
   }
-  alert('The answer is 6!');
+  alert('The answer is 3!');
 }
 
-numberGame1(6, 4);
+numberGame1(3, 4);
 
-function numberGameArray(possibleAnswers, guess, maxGuess, isCorrectAnswer) {
-  let userAnswer = parseInt(prompt('Guess a number in my array 1-50!'));
+function numberGameArray(answers, guess, maxGuess, isCorrectAnswer) {
+  let userAnswer = parseInt(prompt('What number am I thinking between 1-50?'));
 
   while (guess < maxGuess) {
-    for (let i = 0; i < possibleAnswers.length; i += 1) {
-      if (possibleAnswers[i] === userAnswer) {
+    for (let i = 0; i < answers.length; i += 1) {
+      if (answers[i] === userAnswer) {
         isCorrectAnswer = true;
-        alert('Congrats! You got it right!');
-        totalCorrectAnswers += 1;
+        alert('Congrats! You are correct!');
+        score += 1;
         break;
       }
     }
@@ -127,11 +127,11 @@ function numberGameArray(possibleAnswers, guess, maxGuess, isCorrectAnswer) {
     if (isCorrectAnswer === true) {
       break;
     }
-    userAnswer = prompt('Guess again! Guess a number in my array 1-50!');
+    userAnswer = prompt('Guess again!');
   }
-  alert('The answers were '+possibleAnswers+'.');
+  alert('Possible answers were '+answers+'.');
 }
 
-numberGameArray([34, 9, 14, 26, 43, 2], 0, 6, false);
+numberGameArray([2, 12, 65, 34, 98, 3], 0, 6, false);
 
-alert('Okay, you got ' + totalCorrectAnswers + ' correct out of 7!');
+alert('Your score was ' + score + ' out of 7!');
