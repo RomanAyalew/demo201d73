@@ -68,7 +68,7 @@ function guessWhere() {
 guessWhere();
 
 function guessJob() {
-  let jobAnswer = prompt('I used to work for a medical laboratory.').toLowerCase();
+  let jobAnswer = prompt('Have I worked for a medical laboratory?').toLowerCase();
 
   if (jobAnswer === 'yes') {
     alert('Correct!');
@@ -80,18 +80,18 @@ function guessJob() {
 
 guessJob();
 
-function guessSports() {
-  let sportsAnswer = prompt('True or False: My favorite sport is basketball.').toLowerCase();
+function guessVacation() {
+  let sportsAnswer = prompt('Have I visited France?').toLowerCase();
 
-  if (sportsAnswer === 'true') {
-    alert('Yes! My favorite team is the Portland Trail Blazers!');
+  if (sportsAnswer === 'yes') {
+    alert('Yes!);
     totalCorrectAnswers += 1;
   } else {
-    alert('Nope! NBA all the way!');
+    alert('No.');
   }
 }
 
-guessSports();
+guessVacation();
 
 function numberGame1(correctAnswer, guesses) {
   for (let i = 0; i < guesses; i++) {
