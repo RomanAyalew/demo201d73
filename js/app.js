@@ -44,11 +44,11 @@ guessAge();
 function guessVisitPlace() {
   let visitPlaceAnswer = prompt('Yes or no, I like to visit Los Angeles.').toLowerCase();
 
-  if (visitPlaceAnswer === 'true') {
+  if (visitPlaceAnswer === 'yes') {
     alert('Yep!');
     totalCorrectAnswers += 1;
   } else {
-    alert('Nice try, but no!');
+    alert('No, I like to visit Los Angeles');
   }
 }
 
@@ -68,13 +68,13 @@ function guessWhere() {
 guessWhere();
 
 function guessJob() {
-  let jobAnswer = prompt('True or False: I currently teach at the University of Idaho').toLowerCase();
+  let jobAnswer = prompt('I used to work for a medical laboratory.').toLowerCase();
 
-  if (jobAnswer === 'false') {
-    alert('Correct, I taught there 2017-2019.');
+  if (jobAnswer === 'yes') {
+    alert('Correct!');
     totalCorrectAnswers += 1;
   } else {
-    alert('Nope, but I did 2017-2019.');
+    alert('Nope, sorry, I did work for a medical laboratory!');
   }
 }
 
