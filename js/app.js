@@ -1,4 +1,4 @@
-var guessWhere = prompt("Where is Roman from?");
+let guessWhere = prompt("Where is Roman from?");
 
 if (guessWhere === 'seattle')
 
@@ -10,7 +10,7 @@ if (guessWhere === 'seattle')
 else{
   alert('you are wrong:(')
 }
-for (var i=0;i<5;i++){
+for (let i=0;i<5;i++){
   console.log (i)
 }
 
