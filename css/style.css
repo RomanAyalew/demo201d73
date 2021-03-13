@@ -1,22 +1,17 @@
 
 
-p {
-	color :rgba(14, 214, 14, 0.301);
-
+.header-h1{
+	text-align: top;
+	background-color: bisque;
+	padding-top: 80px;
+	padding-bottom: 40px;
 }
-
-.yellow {
-	 
-	color:Yellow;
+.firstp{
+	background-color: rgb(167, 135, 97);
 }
-
-body {
-  background-color:rgb(78, 20, 20);
-}
- h2 {
- color: rgb(45, 149, 149);
+ body{
+	 background-color: rgb(155, 140, 122);
  }
-
- h1 {
-	 color:rgb(184, 44, 44)
+ .ro{
+	 background-color: rgb(161, 128, 86);
  }
